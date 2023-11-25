@@ -5,5 +5,5 @@ from browsers_config.edge import edge_options
 
 @pytest.fixture()
 def selenium(selenium):
-    selenium.maximize_window()
+    selenium.set_window_size(1920, 1080)
     return selenium
