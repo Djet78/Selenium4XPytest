@@ -4,16 +4,23 @@ from ui_comp import SearchBarComponent, CoockiesModalComponent, VideoSearchListC
 
 
 def test_video_search(selenium):
-    with selenium as driver:
-        driver.get('https://www.youtube.com/')
-        coockies_modal = CoockiesModalComponent(driver)
-        search_bar = SearchBarComponent(driver)
+    selenium.get('https://www.youtube.com/')
+    coockies_modal = CoockiesModalComponent(selenium)
+    search_bar = SearchBarComponent(selenium)
 
-        coockies_modal.accept_all_coockies()
-        sleep(5)
-        search_bar.search('Test')
-        sleep(5)
+    coockies_modal.accept_all_coockies()
+    search_bar.search('Test')
 
-        video_list = VideoSearchListComponent(driver)
-        videos = video_list.get_video_list()
-        assert 'test' in videos[0].name.lower()
+    video_list = VideoSearchListComponent(selenium)
+    videos = video_list.get_video_list()
+    assert 'test' in videos[0].name.lower()
+
+
+def test_search_value_remains_in_input(selenium):
+    selenium.get('https://www.youtube.com/')
+    coockies_modal = CoockiesModalComponent(selenium)
+    search_bar = SearchBarComponent(selenium)
+
+    coockies_modal.accept_all_coockies()
+    search_bar.search('Test')
+    search_bar.verify_text_in_field('Test')

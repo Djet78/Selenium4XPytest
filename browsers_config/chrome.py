@@ -12,7 +12,7 @@ def chrome_options(chrome_options):
 
     # optimization opts
     chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--headless')
+    # chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--log-level=3')
     chrome_options.add_argument('--default-shm-size=32m')

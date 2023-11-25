@@ -11,7 +11,7 @@ def edge_options(edge_options):
 
     # optimization opts
     edge_options.add_argument('--no-sandbox')
-    edge_options.add_argument('--headless')
+    # edge_options.add_argument('--headless')
     edge_options.add_argument('--disable-gpu')
     edge_options.add_argument('--log-level=3')
     edge_options.add_argument('--default-shm-size=32m')

@@ -1,3 +1,4 @@
+from time import sleep
 from typing import Self
 
 from ui_comp import BaseComp
@@ -15,4 +16,5 @@ class CoockiesModalComponent(BaseComp):
         approve_btn = self._find_el(self.ACCEPT_ALL_SELECTOR)
         self._js_scroll_to(self.ACCEPT_ALL_SELECTOR)
         approve_btn.click()
+        sleep(3)  # Page reloaded, and I'm lazy to make proper check
         return self
