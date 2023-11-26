@@ -1,8 +1,6 @@
 import allure
 import pytest
 
-from ui_comp import SearchBarComponent, CookiesModalComponent, VideoSearchListComponent
-
 
 @pytest.mark.parametrize("search_term", ["Test", "vIoLin"])
 @allure.title("Test video search. (Input: {search_term})")
@@ -31,3 +29,4 @@ def test_search_value_remains_in_input(unassigned_user):
                    .accept_all_cookies()\
                    .search_video('Test')
     unassigned_user.verify_search_input_equals('Test')
+    assert False, 'Dunno why it failed!'
