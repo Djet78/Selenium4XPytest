@@ -1,27 +1,23 @@
-import allure
-import pytest
+from selenium.webdriver.chrome.options import Options
 
 
-@allure.title("Configure Chrome browser")
-@pytest.fixture
-def chrome_options(chrome_options):
-    # chrome_options.binary_location = '/path/to/chrome'
-    # chrome_options.add_extension('/path/to/extension.crx')
-
-    chrome_options.page_load_strategy = 'normal'
-    chrome_options.add_argument("--lang=en")
-    # chrome_options.add_argument('--kiosk')
+def chrome_options():
+    opt = Options()
+    # opt.binary_location = '/path/to/chrome'
+    # opt.add_extension('/path/to/extension.crx')
+    opt.page_load_strategy = 'normal'
+    opt.add_argument("--lang=en")
+    # opt.add_argument('--kiosk')
 
     # optimization opts
-    chrome_options.add_argument('--no-sandbox')
-    # chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument('--log-level=3')
-    chrome_options.add_argument('--default-shm-size=32m')
-    chrome_options.add_argument('--disable-translate')
-    chrome_options.add_argument('--disable-extensions')
-    # chrome_options.add_argument("--proxy-server='direct://'")
-    # chrome_options.add_argument("--proxy-bypass-list=*")
-    chrome_options.add_experimental_option('excludeSwitches', ['disable-popup-blocking'])
-
-    return chrome_options
+    opt.add_argument('--no-sandbox')
+    # opt.add_argument('--headless')
+    opt.add_argument('--disable-gpu')
+    opt.add_argument('--log-level=3')
+    opt.add_argument('--default-shm-size=32m')
+    opt.add_argument('--disable-translate')
+    opt.add_argument('--disable-extensions')
+    # opt.add_argument("--proxy-server='direct://'")
+    # opt.add_argument("--proxy-bypass-list=*")
+    opt.add_experimental_option('excludeSwitches', ['disable-popup-blocking'])
+    return opt

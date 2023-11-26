@@ -1,14 +1,12 @@
-import allure
-import pytest
+from selenium.webdriver.firefox.options import Options
 
 
-@allure.title("Configure ForeFox browser")
-@pytest.fixture
-def firefox_options(firefox_options):
-    # firefox_options.binary_location = '/path/to/chrome'
-    # firefox_options.add_extension('/path/to/extension.crx')
-    firefox_options.page_load_strategy = 'normal'
-    # firefox_options.add_argument('-headless')
-    firefox_options.set_preference("intl.accept_languages", 'en-us')
-    firefox_options.set_preference("dom.disable_beforeunload", True)
-    return firefox_options
+def firefox_options():
+    opt = Options()
+    # opt.binary_location = '/path/to/chrome'
+    # opt.add_extension('/path/to/extension.crx')
+    opt.page_load_strategy = 'normal'
+    # opt.add_argument('-headless')
+    opt.set_preference("intl.accept_languages", 'en-us')
+    opt.set_preference("dom.disable_beforeunload", True)
+    return opt
