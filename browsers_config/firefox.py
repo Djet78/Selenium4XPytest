@@ -1,6 +1,8 @@
+import allure
 import pytest
 
 
+@allure.title("Configure ForeFox browser")
 @pytest.fixture
 def firefox_options(firefox_options):
     # firefox_options.binary_location = '/path/to/chrome'

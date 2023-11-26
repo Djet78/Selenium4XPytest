@@ -1,6 +1,8 @@
+import allure
 import pytest
 
 
+@allure.title("Configure Edge browser")
 @pytest.fixture
 def edge_options(edge_options):
     # edge_options.binary_location = '/path/to/chrome'
