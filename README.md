@@ -17,4 +17,5 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 3. allure
 
 ## TODO
-1.
+1. Add browser version data to env. file `pytest_report_collectionfinish`
+2. Add validation of passed `--env` and `--driver` cli args.
