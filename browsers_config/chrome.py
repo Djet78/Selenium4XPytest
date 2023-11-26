@@ -1,6 +1,8 @@
+import allure
 import pytest
 
 
+@allure.title("Configure Chrome browser")
 @pytest.fixture
 def chrome_options(chrome_options):
     # chrome_options.binary_location = '/path/to/chrome'

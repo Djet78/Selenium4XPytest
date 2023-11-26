@@ -18,4 +18,5 @@ class SearchBarComponent(BaseComp):
 
     def verify_text_in_field(self, expected_text: str) -> None:
         self.is_loaded()
-        assert expected_text == self._get_text(self.FIELD_SELECTOR)
+        assert expected_text == self._get_text(self.FIELD_SELECTOR), \
+            f'Value in search input should be: "{expected_text}"'
