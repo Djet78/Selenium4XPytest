@@ -17,6 +17,6 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 3. allure
 
 ## TODO
-1. Add browser version data to env. file `pytest_report_collectionfinish`
-3. Check if Safari webdriver can run on Windows. 
-4. 
+6. Add API tests (3). Update `def selenium(request):` fixture to create driver only for UI tests.
+4. Add user manager (factory).
+5. Add urls_mapper for different envs.

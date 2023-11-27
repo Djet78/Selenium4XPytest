@@ -1,7 +1,7 @@
 from selenium.webdriver.firefox.options import Options
 
 
-def firefox_options():
+def firefox_options() -> Options:
     opt = Options()
     # opt.binary_location = '/path/to/chrome'
     # opt.add_extension('/path/to/extension.crx')

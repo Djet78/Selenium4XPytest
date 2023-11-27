@@ -1,5 +1,3 @@
-import os
-
 import allure
 import pytest
 from allure_commons.types import AttachmentType
@@ -41,20 +39,6 @@ def pytest_addoption(parser):
          -- prod
          """
     )
-
-
-@pytest.hookimpl
-def pytest_report_collectionfinish(config, start_path, startdir, items):
-    alluredir = config.getoption('--alluredir')
-    if not os.path.exists(alluredir):
-        os.mkdir(alluredir)
-
-    allure_env_path = os.path.join(alluredir, 'environment.properties')
-    with open(allure_env_path, 'w') as _f:
-        _f.write(f"""
-Environment={config.getoption('--env')}
-Driver={config.getoption('--driver')}
-        """)
 
 
 @pytest.hookimpl(hookwrapper=True)

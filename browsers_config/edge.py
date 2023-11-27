@@ -1,7 +1,7 @@
 from selenium.webdriver.edge.options import Options
 
 
-def edge_options():
+def edge_options() -> Options:
     opt = Options()
     # opt.binary_location = '/path/to/chrome'
     # opt.add_extension('/path/to/extension.crx')
