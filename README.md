@@ -18,4 +18,5 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 
 ## TODO
 1. Add browser version data to env. file `pytest_report_collectionfinish`
-2. Add validation of passed `--env` and `--driver` cli args.
+3. Check if Safari webdriver can run on Windows. 
+4. 

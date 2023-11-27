@@ -11,6 +11,11 @@ def pytest_addoption(parser):
         "--driver",
         action="store",
         default="chrome",
+        choices=[
+            'chrome',
+            'firefox',
+            'edge',
+        ],
         help="""
         Pytest will run tests against specified browser. Available options:
          -- chrome (default)
@@ -22,6 +27,12 @@ def pytest_addoption(parser):
         "--env",
         action="store",
         default="dev",
+        choices=[
+            'dev',
+            'test',
+            'stage',
+            'prod',
+        ],
         help="""
         Specify test environment for further utilization in test. Available options:
          -- dev (default)
