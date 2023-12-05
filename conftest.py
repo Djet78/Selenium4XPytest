@@ -36,5 +36,5 @@ def selenium(request):
 
 @allure.title('Create Unassigned user')
 @pytest.fixture()
-def unassigned_user(selenium):
+def unassigned_web_user(selenium):
     return UnassignedUser(selenium)
