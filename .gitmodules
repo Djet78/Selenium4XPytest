@@ -1,3 +1,6 @@
 [submodule "submodules/type_validator"]
 	path = submodules/type_validator
 	url = https://github.com/Djet78/dataclass_type_validator
+[submodule "submodules/wd_actions"]
+	path = submodules/wd_actions
+	url = https://github.com/Djet78/wd_actions
