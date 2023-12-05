@@ -9,7 +9,7 @@ from api_comp import Booking
 @pytest.mark.api
 class TestBooking:
 
-    @pytest.mark.parametrize(('book_data', 'expected_code'), [
+    @pytest.mark.parametrize('book_data, expected_code', [
         ({}, 200),
         ({'firstname': ''}, 200),
         ({'firstname': 100}, 500),

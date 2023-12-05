@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 
 import requests
 
-from dataclass_type_validator import BaseDataclass
+from submodules.type_validator import BaseDataclass
 
 
 @dataclass
