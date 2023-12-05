@@ -21,6 +21,6 @@ class TestBooking:
         assert resp.status_code == expected_code
         if 200 < resp.status_code < 300:
             resp_json = resp.json()
-            book.check_params_type()
+            book.check_properties_type()
             assert resp_json['bookingid']
             assert resp_json['booking'] == book.as_dict()
