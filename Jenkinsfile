@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Run Internal Tests') {
             steps {
-                echo Test SCM change
+                echo 'Test SCM change'
                 sh 'pytest -m "internal"'
             }
         }
