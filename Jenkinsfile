@@ -7,11 +7,11 @@ pipeline {
                 echo 'Test SCM change'
 
                 bat '''
-                pip install -r submodules/type_validator/requirements.txt
-                pip install -r submodules/wd_actions/requirements.txt
-                pip install -r requirements.txt
+                pip3 install -r submodules/type_validator/requirements.txt
+                pip3 install -r submodules/wd_actions/requirements.txt
+                pip3 install -r requirements.txt
 
-                pip freeze
+                pip3 freeze
                 '''
             }
         }
