@@ -2,7 +2,7 @@
 pipeline {
     agent any
     stages {
-        stage('Run Internal Tests') {
+        stage('install test dependencies') {
             steps {
                 echo 'Test SCM change'
                 bat '''
