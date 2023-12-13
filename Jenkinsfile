@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install test dependencies') {
             steps {
-                echo 'Test SCM change'
+                echo '%PATH%'
 
                 bat '''
                 pip install -r submodules/type_validator/requirements.txt
