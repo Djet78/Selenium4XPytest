@@ -17,6 +17,22 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 3. allure
 4. requrests
 
+### Jenkins configuration for local win11 agent:
+1. Complete Win installation of Jenkins: https://www.jenkins.io/doc/book/installing/windows/ 
+1. Install required non default plugins:
+   2. Pyenv Pipeline - https://plugins.jenkins.io/pyenv-pipeline/
+   3. Allure - https://plugins.jenkins.io/allure-jenkins-plugin/
+
+2. Configure the Allure plugin: https://allurereport.org/docs/integrations-jenkins/ - 
+3. Add following env. variables for Jenkins: 
+   4. `PythonPath` - Path to a python exe, ie: `C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312` 
+4. Configure Jenkins pipeline:
+   5. Fetch git from here: https://github.com/Djet78/Selenium4XPytest
+6. 
+
+
+
+
 ## TODO
 6. Add API tests (3). 
    7. """Update `def selenium(request):` fixture to create driver only for UI tests.""" - instead was added marks for tests. So if test no need selenium - it won't be used.
