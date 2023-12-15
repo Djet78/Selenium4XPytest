@@ -28,7 +28,8 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
    4. `PythonPath` - Path to a python exe, ie: `C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312` 
 4. Configure Jenkins pipeline:
    5. Fetch git from here: https://github.com/Djet78/Selenium4XPytest
-6. 
+   6. To use Jenkinsfile script form repo
+
 
 
 
