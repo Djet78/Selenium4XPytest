@@ -20,7 +20,7 @@ pipeline {
             steps {
                 withPythonEnv('C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312') {
                     catchError(buildResult: 'SUCCESS', message: 'Tests failed') {
-                        bat "pytest -m \"internal\""
+                        bat "pytest -m \"${Scope}\""
                     }
                 }
             }
