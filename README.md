@@ -1,6 +1,13 @@
 # Selenium4 X Pytest X Allure
 Selenium4 in combination with Pytest test framework, and allure retorting example.
 
+### Used python main packages:
+1. pytest
+2. selenium
+3. allure
+4. requrests
+5. poetry
+
 
 ## Setup for Windows
 
@@ -11,11 +18,11 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
    4. Or using Scoop: https://allurereport.org/docs/gettingstarted-installation/#install-via-scoop-for-windows
 5. Into `PATH` - add path to the allure.bat file. Ex: `*\allure\allure-2.24.1\bin`
 
-### Used python main packages:
-1. pytest
-2. selenium
-3. allure
-4. requrests
+
+### Install Poetry
+1. Install pipx via pip - https://github.com/pypa/pipx?tab=readme-ov-file
+2. Install poetry via pipx - https://python-poetry.org/docs/#installing-with-pipx 
+
 
 ### Jenkins configuration for local win11 agent:
 1. Complete Win installation of Jenkins: https://www.jenkins.io/doc/book/installing/windows/ 
