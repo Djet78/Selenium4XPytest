@@ -17,10 +17,34 @@ pipeline {
         }
 
         stage('Execute tests') {
-            steps {
-                withPythonEnv('C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312') {
-                    catchError(buildResult: 'SUCCESS', message: 'Tests failed') {
-                        bat "pytest -m \"${Scope}\" --driver ${Driver} --env ${AutomationEnv}"
+            parallel {
+                stage('Test on Chrome') {
+                    steps {
+                        withPythonEnv('C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312') {
+                            catchError(buildResult: 'SUCCESS', message: 'Tests failed') {
+                                bat "pytest -m \"ui\" --driver chrome --env ${AutomationEnv}"
+                            }
+                        }
+                    }
+                }
+
+                stage('Test on FireFox') {
+                    steps {
+                        withPythonEnv('C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312') {
+                            catchError(buildResult: 'SUCCESS', message: 'Tests failed') {
+                                bat "pytest -m \"ui\" --driver firefox --env ${AutomationEnv}"
+                            }
+                        }
+                    }
+                }
+
+                stage('Test API') {
+                    steps {
+                        withPythonEnv('C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312') {
+                            catchError(buildResult: 'SUCCESS', message: 'Tests failed') {
+                                bat "pytest -m \"api" --env ${AutomationEnv}"
+                            }
+                        }
                     }
                 }
             }
@@ -34,5 +58,4 @@ pipeline {
             }
         }
     }
-
 }
