@@ -15,3 +15,14 @@ def add_pytest_res_evn_file(pytest_config, key, value):
     else:
         with open(allure_env_path, 'a') as _f:
             _f.write(env_data)
+
+
+def singleton(class_):
+    instances = {}
+
+    def getinstance(*args, **kwargs):
+        if class_ not in instances:
+            instances[class_] = class_(*args, **kwargs)
+        return instances[class_]
+
+    return getinstance

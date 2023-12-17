@@ -14,7 +14,7 @@ pipeline {
         stage('Execute tests') {
             steps {
                 catchError(buildResult: 'SUCCESS', message: 'Tests failed') {
-                    bat "poetry run pytest -m \"${Scope}\" --driver ${Driver} --env ${AutomationEnv}"
+                    bat "poetry run pytest -m \"${Scope}\" --driver ${Driver} --env ${AutomationEnv} --config-file=pytest.jenkins.ini"
                 }
             }
         }

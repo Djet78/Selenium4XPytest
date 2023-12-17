@@ -50,11 +50,7 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 
 ## TODO
 6. Add API tests (3). 
-   7. """Update `def selenium(request):` fixture to create driver only for UI tests.""" - instead was added marks for tests. So if test no need selenium - it won't be used.
    9. Add some default connector classes for SqlDB
-4. Add user factory (at least some template).
-5. Add different `pytest.ini` file for different envs. 
-5. Add urls_mapper for different envs.
 6. Add linter
    7. Add type checker? https://www.infoworld.com/article/3575079/4-python-type-checkers-to-keep-your-code-clean.html
-8. 
+8. Add pytest-cov to type_checker submodule (package should be already there)

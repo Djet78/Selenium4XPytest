@@ -160,4 +160,4 @@ cython_debug/
 .idea/
 
 # Test reports
-allure-results/*
+allure-results/

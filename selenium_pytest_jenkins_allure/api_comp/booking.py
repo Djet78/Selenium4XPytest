@@ -2,17 +2,25 @@ from dataclasses import dataclass, field
 
 import requests
 
+from selenium_pytest_jenkins_allure.env_configurator import EnvConfigurator
 from submodules.type_validator import BaseDataclass
 
 
 @dataclass
-class Dates(BaseDataclass):
+class BaseEnvDataClass(BaseDataclass):
+
+    def get_env_info(self):
+        return EnvConfigurator().env
+
+
+@dataclass
+class Dates(BaseEnvDataClass):
     checkin: str = '2022-01-01'
     checkout: str = '2023-01-01'
 
 
 @dataclass
-class Booking(BaseDataclass):
+class Booking(BaseEnvDataClass):
     firstname: str = 'Test'
     lastname: str = 'Book'
     totalprice: int = 1
