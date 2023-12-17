@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "selenium_pytest_jenkins_allure"
+name = "selenium-pytest-jenkins-allure"
 version = "0.1.0"
 description = "Training for setting up a complete automation project, Using Pytest, Selenium, Jenkins and Allure"
 authors = ["Viacheslav <vacheslavuslistyj@gmail.com>"]
@@ -7,6 +7,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+
+type-validator = { path = "./submodules/type_validator", develop=true }
+webdriver-actions = { path = "./submodules/wd_actions", develop=true }
+
+pytest = "^7.4.3"
+allure-pytest = "^2.13.2"
+requests = "^2.31.0"
+selenium = "^4.16.0"
 
 
 [build-system]

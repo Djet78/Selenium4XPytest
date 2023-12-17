@@ -1,7 +1,7 @@
 import allure
 import pytest
 
-from api_comp import Booking
+from selenium_pytest_jenkins_allure.api_comp import Booking
 
 
 @allure.tag('booking', 'api')

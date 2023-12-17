@@ -1,13 +1,10 @@
-import allure
-import pytest
-
 from selenium.webdriver import Chrome, Firefox, Edge
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from actors import UnassignedUser
-from browsers_config import chrome_options, edge_options, firefox_options
-from pytest_hooks import *
-from utils import add_pytest_res_evn_file
+from selenium_pytest_jenkins_allure.pytest_hooks import *
+from selenium_pytest_jenkins_allure.actors import UnassignedUser
+from selenium_pytest_jenkins_allure.browsers_config import chrome_options, edge_options, firefox_options
+from selenium_pytest_jenkins_allure.utils import add_pytest_res_evn_file
 
 
 @allure.title('Launch webdriver')

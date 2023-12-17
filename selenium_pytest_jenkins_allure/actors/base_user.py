@@ -3,7 +3,7 @@ from typing import Self
 
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from ui_comp import SearchBarComponent, CookiesModalComponent, VideoSearchListComponent
+from selenium_pytest_jenkins_allure.ui_comp import SearchBarComponent, CookiesModalComponent, VideoSearchListComponent
 
 
 class BaseUser:
