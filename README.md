@@ -51,9 +51,6 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 ## TODO
 6. Add API tests (3). 
    9. Add some default connector classes for SqlDB
-5. Dif envs handling 
-   6. Add different `pytest.ini` file for different envs. 
-   6. Update jenkins config, to run against different envs. 
 6. Add linter
    7. Add type checker? https://www.infoworld.com/article/3575079/4-python-type-checkers-to-keep-your-code-clean.html
 8. Add pytest-cov to type_checker submodule (package should be already there)
