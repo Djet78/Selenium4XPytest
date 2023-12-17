@@ -1,43 +1,48 @@
 # Selenium4 X Pytest X Allure
 Selenium4 in combination with Pytest test framework, and allure retorting example.
 
-### Used python main packages:
+#### Used python main packages:
 1. pytest
 2. selenium
 3. allure
 4. requrests
 5. poetry
 
+---
 
 ## Setup for Windows
 
-### Install Allure 
-1. Download Java 8+ : https://www.oracle.com/java/technologies/downloads/
+### 1. Install Allure 
+1. Download Java 21 : https://www.oracle.com/java/technologies/downloads/
 2. Set `JAVA_HOME` environment variable, point it to the java root folder.
 3. Download and unpack latest allure release: https://github.com/allure-framework/allure2/releases
-   4. Or using Scoop: https://allurereport.org/docs/gettingstarted-installation/#install-via-scoop-for-windows
-5. Into `PATH` - add path to the allure.bat file. Ex: `*\allure\allure-2.24.1\bin`
+   1. Or using Scoop: https://allurereport.org/docs/gettingstarted-installation/#install-via-scoop-for-windows
+4. Into `PATH` - add path to the allure.bat file. Ex: `*\allure\allure-2.24.1\bin`
 
 
-### Install Poetry
+### 2. Install Poetry
 1. Install pipx via pip - https://github.com/pypa/pipx?tab=readme-ov-file
 2. Install poetry via pipx - https://python-poetry.org/docs/#installing-with-pipx 
 
 
-### Jenkins configuration for local win11 agent:
-1. Complete Win installation of Jenkins: https://www.jenkins.io/doc/book/installing/windows/ 
-1. Install required non default plugins:
-   2. Pyenv Pipeline - https://plugins.jenkins.io/pyenv-pipeline/
-   3. Allure - https://plugins.jenkins.io/allure-jenkins-plugin/
+### 3. Jenkins configuration for local win11 agent:
+1. Download Java 21 : https://www.oracle.com/java/technologies/downloads/
+2. Set `JAVA_HOME` environment variable, point it to the java root folder.
+3. Complete Win installation of Jenkins: https://www.jenkins.io/doc/book/installing/windows/ 
+4. Install required non default plugins:
+   1. Allure - https://plugins.jenkins.io/allure-jenkins-plugin/
 
-2. Configure the Allure plugin: https://allurereport.org/docs/integrations-jenkins/ - 
-3. Add following env. variables for Jenkins: 
-   4. `PythonPath` - Path to a python exe, ie: `C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python312` 
-4. Configure Jenkins pipeline:
-   5. Fetch git from here: https://github.com/Djet78/Selenium4XPytest
-   6. To use Jenkinsfile script form repo
+5. Configure the Allure plugin: https://allurereport.org/docs/integrations-jenkins/ - 
+6. Configure Jenkins pipeline:
+   1. Fetch git from here: https://github.com/Djet78/Selenium4XPytest
+   2. And use Jenkinsfile script form repo
 
 
+### 4. Configure local project: 
+1. Clone the repo
+2. In the project root dir - run `poetry install`
+
+---
 
 
 
