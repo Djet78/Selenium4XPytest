@@ -4,10 +4,10 @@ pipeline {
     stages {
         stage('Create virtualenv') {
             steps {
-                echo "${PATH}%"
+                echo "${PATH}"
                 bat "git submodule update --init --recursive"
-                poetry "install"
-                poetry "show --top-level"
+                bat "poetry install"
+                bat "poetry show --top-level"
             }
         }
 
