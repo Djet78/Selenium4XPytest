@@ -6,8 +6,8 @@ pipeline {
             steps {
                 echo "${PATH}%"
                 bat "git submodule update --init --recursive"
-                bat "poetry install"
-                bat "poetry show --top-level"
+                poetry "install"
+                poetry "show --top-level"
             }
         }
 
