@@ -7,7 +7,7 @@ pipeline {
                 echo "${PATH}"
                 bat "git submodule update --init --recursive"
                 bat "poetry install"
-                bat "poetry show --top-level -vv"
+                bat "poetry show --top-level"
             }
         }
 
