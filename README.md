@@ -23,6 +23,7 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 ### 2. Install Poetry
 1. Install pipx via pip - https://github.com/pypa/pipx?tab=readme-ov-file
 2. Install poetry via pipx - https://python-poetry.org/docs/#installing-with-pipx 
+3. Add poetry executable into `PATH`. Ex: `c:\users\test\.local\bin`
 
 
 ### 3. Jenkins configuration for local win11 agent:
@@ -41,6 +42,7 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 ### 4. Configure local project: 
 1. Clone the repo
 2. In the project root dir - run `poetry install`
+3. Activate created env: `.\.venv\Scripts\activate` 
 
 ---
 
