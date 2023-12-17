@@ -1,10 +1,18 @@
 from selenium.webdriver import Chrome, Firefox, Edge
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from selenium_pytest_jenkins_allure.pytest_hooks import *
+from selenium_pytest_jenkins_allure.env_configurator import EnvConfigurator
 from selenium_pytest_jenkins_allure.actors import UnassignedUser
 from selenium_pytest_jenkins_allure.browsers_config import chrome_options, edge_options, firefox_options
+from selenium_pytest_jenkins_allure.pytest_hooks import *
 from selenium_pytest_jenkins_allure.utils import add_pytest_res_evn_file
+
+
+@allure.title('Process env configs.')
+@pytest.fixture(scope='session', autouse=True)
+def configurator(request):
+    # Proccess env data once. An all other EnvConfigurator() calls will return the same instance.
+    EnvConfigurator(request.config.getoption("--env"))
 
 
 @allure.title('Launch webdriver')
@@ -23,7 +31,7 @@ def selenium(request):
     add_pytest_res_evn_file(request.config, 'DRIVER', selenium.capabilities['browserName'])
     add_pytest_res_evn_file(request.config, 'BROWSER_VERSION', selenium.capabilities['browserVersion'])
     add_pytest_res_evn_file(request.config, 'OS', selenium.capabilities['platformName'])
-    add_pytest_res_evn_file(request.config, 'ENVIRONMENT', request.config.getoption('--env'))
+    add_pytest_res_evn_file(request.config, 'ENVIRONMENT', configurator().env)
     # add_pytest_res_evn_file(request.config, 'BROWSER_RESOLUTION', selenium.get_window_size())
 
     yield selenium
