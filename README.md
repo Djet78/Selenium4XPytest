@@ -1,3 +1,6 @@
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
 # Selenium4 X Pytest X Allure
 Selenium4 in combination with Pytest test framework, and allure retorting example.
 
@@ -41,15 +44,20 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 
 ### 4. Configure local project: 
 1. Clone the repo
-2. In the project root dir - run `poetry install`
-3. Activate created env: `.\.venv\Scripts\activate` 
+2. Run `git submodules --init --recursive`
+3. Run `pre-commit install`
+4. Run `pre-commit install-hooks`
+5. In the project root dir - run `poetry install`
+6. Activate created env: `.\.venv\Scripts\activate` 
+
+
 
 ---
 
 
 
 ## TODO
-6. Add API tests (3). 
-   9. Add some default connector classes for SqlDB
-6. Add linter
-   7. Add type checker? https://www.infoworld.com/article/3575079/4-python-type-checkers-to-keep-your-code-clean.html
+1. Add some default connector classes for SqlDB
+2. Add test execution into CI for type_validator package 
+3. Add requests class, to handle timeouts, requests sending, file upload and so on. 
+
