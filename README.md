@@ -56,8 +56,6 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 
 
 ## TODO
-6. Add API tests (3). 
-   9. Add some default connector classes for SqlDB
-6. Add linter
-   8. Add lint checks to the GitHub CI on merge requests.
-7. Add requests class, to handle timeouts, requests sending, file upload and so on. 
+1. Add some default connector classes for SqlDB
+2. Add test execution into CI for type_validator package 
+3. Add requests class, to handle timeouts, requests sending, file upload and so on. 
