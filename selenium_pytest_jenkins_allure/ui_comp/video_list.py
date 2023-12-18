@@ -1,5 +1,3 @@
-from typing import Union
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
@@ -8,14 +6,14 @@ from submodules.wd_actions import WDActions
 
 
 class VideoPreviewComponent(WDActions):
-    TITLE_DATA_SELECTOR = f'.//a[@id="video-title"]'
+    TITLE_DATA_SELECTOR = './/a[@id="video-title"]'
 
     def __init__(self, driver: WebDriver, element: WebElement):
         super().__init__(driver)
         self.element = element
         self.name = self.get_name()
 
-    def get_name(self) -> Union[str, bool]:
+    def get_name(self) -> str | bool:
         title_data = self.element.find_element(By.XPATH, self.TITLE_DATA_SELECTOR)
         return title_data.get_attribute('title')
 

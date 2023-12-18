@@ -11,11 +11,12 @@ class SearchBarComponent(WDActions):
 
     def search(self, text: str) -> None:
         self.is_loaded()
-        self.click(self.FIELD_SELECTOR) \
-            .input_text(self.FIELD_SELECTOR, text) \
-            .input_text(self.FIELD_SELECTOR, Keys.ENTER)
+        self.click(self.FIELD_SELECTOR).input_text(self.FIELD_SELECTOR, text).input_text(
+            self.FIELD_SELECTOR, Keys.ENTER
+        )
 
     def verify_text_in_field(self, expected_text: str) -> None:
         self.is_loaded()
-        assert expected_text == self.get_text(self.FIELD_SELECTOR), \
-            f'Value in search input should be: "{expected_text}"'
+        assert expected_text == self.get_text(
+            self.FIELD_SELECTOR
+        ), f'Value in search input should be: "{expected_text}"'
