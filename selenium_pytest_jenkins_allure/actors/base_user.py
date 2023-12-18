@@ -7,7 +7,6 @@ from selenium_pytest_jenkins_allure.ui_comp import SearchBarComponent, CookiesMo
 
 
 class BaseUser:
-
     def __init__(self, driver: WebDriver):
         self.driver = driver
 
@@ -32,8 +31,9 @@ class BaseUser:
     def verify_1st_video_contains_term(self, search_term) -> Self:
         video_list = VideoSearchListComponent(self.driver)
         videos = video_list.get_video_list()
-        assert search_term.lower() in videos[0].name.lower(), \
-            f'Video name "{videos[0].name.lower()}" not contains the search term: "{search_term}"'
+        assert (
+            search_term.lower() in videos[0].name.lower()
+        ), f'Video name "{videos[0].name.lower()}" not contains the search term: "{search_term}"'
         return Self
 
     @allure.step('User sees the {search_term} in search input')

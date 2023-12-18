@@ -17,5 +17,6 @@ class SearchBarComponent(WDActions):
 
     def verify_text_in_field(self, expected_text: str) -> None:
         self.is_loaded()
-        assert expected_text == self.get_text(self.FIELD_SELECTOR), \
-            f'Value in search input should be: "{expected_text}"'
+        assert expected_text == self.get_text(
+            self.FIELD_SELECTOR
+        ), f'Value in search input should be: "{expected_text}"'

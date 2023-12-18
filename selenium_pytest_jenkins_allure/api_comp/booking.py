@@ -8,7 +8,6 @@ from submodules.type_validator import BaseDataclass
 
 @dataclass
 class BaseEnvDataClass(BaseDataclass):
-
     def get_env_info(self):
         return EnvConfigurator().env
 

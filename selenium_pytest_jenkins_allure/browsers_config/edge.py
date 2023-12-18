@@ -6,7 +6,7 @@ def edge_options() -> Options:
     # opt.binary_location = '/path/to/chrome'
     # opt.add_extension('/path/to/extension.crx')
     opt.page_load_strategy = 'normal'
-    opt.add_argument("--lang=en")
+    opt.add_argument('--lang=en')
     # opt.add_argument('--kiosk')
 
     # optimization opts

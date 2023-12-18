@@ -15,13 +15,13 @@ from selenium_pytest_jenkins_allure.utils import add_pytest_res_evn_file
 @pytest.fixture(scope='session', autouse=True)
 def configurator(request):
     # Proccess env data once. An all other EnvConfigurator() calls will return the same instance.
-    return EnvConfigurator(request.config.getoption("--env"))
+    return EnvConfigurator(request.config.getoption('--env'))
 
 
 @allure.title('Launch webdriver')
 @pytest.fixture(scope='session')
 def selenium(request, configurator):
-    opt = request.config.getoption("--driver")
+    opt = request.config.getoption('--driver')
     opt_map = {
         'chrome': (Chrome, chrome_options()),
         'edge': (Edge, edge_options()),
