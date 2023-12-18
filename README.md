@@ -46,7 +46,7 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 
 ### 4. Configure local project: 
 1. Clone the repo
-2. Run `git submodules --init --recursive`
+2. Run `git submodules update --init --recursive`
 3. Run `pre-commit install`
 4. Run `pre-commit install-hooks`
 5. In the project root dir - run `poetry install`
