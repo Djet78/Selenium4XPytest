@@ -1,6 +1,6 @@
-import allure
 from typing import Self
 
+import allure
 from selenium.webdriver.remote.webdriver import WebDriver
 
 from selenium_pytest_jenkins_allure.ui_comp import SearchBarComponent, CookiesModalComponent, VideoSearchListComponent

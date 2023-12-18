@@ -52,4 +52,5 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 6. Add API tests (3). 
    9. Add some default connector classes for SqlDB
 6. Add linter
-   7. Add type checker? https://www.infoworld.com/article/3575079/4-python-type-checkers-to-keep-your-code-clean.html
+   8. Add lint checks to the GitHub CI on merge requests.
+7. Add requests class, to handle timeouts, requests sending, file upload and so on. 

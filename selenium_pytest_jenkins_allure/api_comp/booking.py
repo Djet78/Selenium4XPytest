@@ -30,5 +30,5 @@ class Booking(BaseEnvDataClass):
 
     def create(self, **kwargs) -> requests.Response:
         self.dict2object(kwargs)
-        resp = requests.post('https://restful-booker.herokuapp.com/booking', json=self.as_dict())
+        resp = requests.post('https://restful-booker.herokuapp.com/booking', json=self.as_dict(), timeout=5)
         return resp

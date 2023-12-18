@@ -42,7 +42,7 @@ def pytest_addoption(parser):
 
 
 @pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(call, item):
+def pytest_runtest_makereport(call, item):  # noqa: ARG001
     # Get screenshot of a failed test
     result = yield
     result = result.get_result()
