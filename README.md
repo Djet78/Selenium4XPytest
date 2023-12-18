@@ -5,11 +5,13 @@
 Selenium4 in combination with Pytest test framework, and allure retorting example.
 
 #### Used python main packages:
-1. pytest
-2. selenium
-3. allure
-4. requrests
-5. poetry
+1. `pytest` - Test runner
+2. `selenium` - Web UI interactions driver
+3. `allure` - reporting
+   1. `allure-pytest` - integration with pytest
+4. `requrests` - API interactions 
+5. `poetry` - Dependencies management
+6. `ruff` - Linter and formatting tool
 
 ---
 
