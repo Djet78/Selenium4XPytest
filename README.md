@@ -58,6 +58,19 @@ Selenium4 in combination with Pytest test framework, and allure retorting exampl
 
 
 
+## Usage
+
+All commands should be executed inside virtualenv, or be prefixed with `poetry run`
+
+Execute tests
+1. `pytest` - Run everything that project have
+2. `pytest -m "<scope>"` - run all tests that marked by <scope>
+3. `pytest -m "<scope>" --browser <driver>` - run all marked tests on mentioned driver
+4. `pytest --browser <driver>` - run tests on a specified driver 
+5. `pytest --browser <driver_1> --browser <driver_2>` - run tests on all mentioned drivers
+6. `pytest --numprocesses 2` - run tests in parallel. Recommend to use no more than half of logical CPU cores.
+
+
 ## TODO
 1. Add some default connector classes for SqlDB
 2. Add test execution into CI for type_validator package 
