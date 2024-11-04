@@ -1,7 +1,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
-# Selenium4 X Pytest X Allure
+# Selenium4 X Pytest X Allure X Jenkins
 Selenium4 in combination with Pytest test framework, and allure retorting example.
 
 #### Used python main packages:
